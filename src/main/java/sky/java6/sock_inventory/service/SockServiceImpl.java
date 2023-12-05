@@ -15,7 +15,8 @@ public class SockServiceImpl implements SockService{
     private final SocksRepository repository;
     @Override
     public Integer getReport(String color, Operator operator, Integer cottonPart) {
-        return null;
+
+        return 1000;
     }
 
     @Override

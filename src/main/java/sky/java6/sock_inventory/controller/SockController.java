@@ -13,9 +13,9 @@ public class SockController {
     private final SockService service;
 
     @GetMapping
-    public Integer getReport(@PathVariable String color,
-                             @PathVariable Operator operator,
-                             @PathVariable Integer cottonPart
+    public Integer getReport(@RequestBody String color,
+                             Operator operator,
+                             Integer cottonPart
     ) {
         return service.getReport(color, operator, cottonPart);
     }
