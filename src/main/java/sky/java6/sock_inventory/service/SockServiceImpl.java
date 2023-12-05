@@ -21,7 +21,7 @@ public class SockServiceImpl implements SockService{
     @Override
     public void income(NewMoving newMoving) {
         Socks socks = repository.findByColorAndCottonPart(newMoving.getColor(), newMoving.getCottonPart());
-        if(newMoving.getQuantity() < 1){
+        if(newMoving.getQuantity() < 1 || newMoving.getCottonPart() > 100){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }else if(socks == null){
             repository.save(NewMoving.toSocks(newMoving));

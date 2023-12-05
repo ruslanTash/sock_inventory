@@ -17,7 +17,7 @@ import javax.validation.constraints.Min;
 @AllArgsConstructor
 public class Socks {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String color;
     @Min(0)
@@ -26,4 +26,9 @@ public class Socks {
     @Min(0)
     private Integer quantity;
 
+    public Socks(String color, Integer cottonPart, Integer quantity) {
+        this.color = color;
+        this.cottonPart = cottonPart;
+        this.quantity = quantity;
+    }
 }
