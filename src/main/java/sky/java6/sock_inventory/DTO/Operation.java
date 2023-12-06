@@ -1,5 +1,11 @@
 package sky.java6.sock_inventory.DTO;
 
-public enum Operator {
+import lombok.Data;
+
+
+
+public enum Operation {
     moreThan, lessThan, equal;
+
 }
+
