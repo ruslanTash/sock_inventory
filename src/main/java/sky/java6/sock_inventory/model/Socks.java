@@ -20,10 +20,7 @@ public class Socks {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String color;
-    @Min(0)
-    @Max(100)
     private Integer cottonPart;
-    @Min(0)
     private Integer quantity;
 
     public Socks(String color, Integer cottonPart, Integer quantity) {
