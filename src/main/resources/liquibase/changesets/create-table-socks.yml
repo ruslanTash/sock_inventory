@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ruslanTash
+      changes:
+        - createTable:
+            tableName: socks
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: color
+                  type: character varying(255)
+              - column:
+                  name: cotton_part
+                  type: integer
+              - column:
+                  name: quantity
+                  type: integer
